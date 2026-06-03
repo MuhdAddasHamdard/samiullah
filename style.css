@@ -1,0 +1,15 @@
+.box {
+  padding: 20px;
+  border: 1px solid gray;
+  width: 300px;
+  margin-top: 40px;
+  margin: auto;
+}
+
+.box::before,
+.box::after {
+  content: " ";
+  border: 2px solid sandybrown;
+  /* width: 100%; */
+  display: block;
+}
