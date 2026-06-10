@@ -1,18 +1,23 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Form from "./components/Form";
-import SecondForm from "./components/SecondForm";
-import ThirdForm from "./components/ThirdForm";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./components/About";
 
 const App = () => {
   return (
-    <div>
-      {/* <Navbar /> */}
+    <BrowserRouter>
+      <div>
+        <Header />
 
-      {/* <Form /> */}
-      {/* <SecondForm /> */}
-      <ThirdForm></ThirdForm>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 
