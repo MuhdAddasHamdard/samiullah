@@ -23,7 +23,7 @@ const Contact = () => {
     <div style={{ padding: "20px" }}>
       <h1>Contact Page</h1>
 
-      <div style={styles.container}>
+      <div className="position-relative" style={styles.container}>
         {contactOptions.map((option) => (
           <div key={option.id} style={styles.card}>
             <h3>{option.title}</h3>

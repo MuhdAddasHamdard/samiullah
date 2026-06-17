@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import Header from "./Header";
+import Spin from "./Spin";
 
 const teamMembers = [
   {
@@ -19,6 +22,12 @@ const teamMembers = [
 ];
 
 const About = () => {
+  const [message, setMessage] = useState(<Spin />);
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(<Header />);
+    }, 3000);
+  }, [null]);
   return (
     <div style={{ padding: "20px" }}>
       <h1>About Page</h1>
@@ -32,6 +41,8 @@ const About = () => {
           </div>
         ))}
       </div>
+
+      <div> {message}</div>
     </div>
   );
 };
